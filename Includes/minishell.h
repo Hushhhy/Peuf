@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:22:22 by pgrellie          #+#    #+#             */
-/*   Updated: 2024/10/30 18:57:47 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:47:08 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -289,6 +289,7 @@ char			*create_filename(void);
 void			here_doc_count(t_ms *ms, t_token *tok);
 int				open_file(t_ms *ms, char *filename);
 char			*handle_null_line(t_ms *ms, char *filename, char *limiter);
+void			free_ctrl_c(t_ms *ms);
 void			write_line_to_file(t_ms *ms, char *line);
 int				check_line_against_limiter(char *line, char *limiter);
 void			handle_here_doc(t_ms *ms, t_token **tokens);

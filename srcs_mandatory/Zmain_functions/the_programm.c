@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:16:36 by acarpent          #+#    #+#             */
-/*   Updated: 2024/10/30 19:12:11 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:38:33 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,7 @@ void	the_program(t_ms *ms)
 			continue ;
 		handle_here_doc(ms, &ms->tokens);
 		if (ms->tokens)
-		{
-			printf("DDD");
 			ms->v_return = executor(ms);
-		}
-		printf("FFF");
 		free(ms->prompt);
 		free_tokens(&ms->tokens);
 		delete_tmp_files();

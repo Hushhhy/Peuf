@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 21:26:09 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/30 18:16:42 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:42:48 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	clear_redirs_list(t_redirs **redirs)
 
 	if (redirs == NULL || *redirs == NULL)
 		return ;
-	dprintf(2, "PRESENT\n");
 	current = *redirs;
 	while (current != NULL)
 	{

@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:07:42 by acarpent          #+#    #+#             */
-/*   Updated: 2024/10/30 18:59:52 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:43:22 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	zero_pid_handle(int saved_stdin, char *tmp_file,
 		exit(EXIT_FAILURE);
 	}
 	read_and_write_lines(ms, tmp_file, limiter->value, saved_stdin);
+	free(tmp_file);
 	clean_hd_child(ms);
 	exit(0);
 }
@@ -62,4 +63,13 @@ void clear_program(t_ms *ms)
 		free(ms->pid);
 	if (ms)
 		free(ms);
+}
+
+void	free_ctrl_c(t_ms *ms)
+{
+	delete_tmp_files();
+	close_all_fds();
+	free_tokens(&ms->tokens);
+	free_env(&ms->env);
+	free(ms->envi);
 }

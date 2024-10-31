@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:47:02 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/30 18:31:27 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:38:44 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,6 @@ int	executor(t_ms *ms)
 		v_return = bb_executioner(ms);
 	if (ms->b == false)
 		v_return = executioner(ms);
-	dprintf(2, "PARENY\n");
 	close_and_free(ms);
 	return (v_return);
 }

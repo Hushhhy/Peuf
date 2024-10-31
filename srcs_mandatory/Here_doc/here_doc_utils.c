@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:19:05 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/29 18:38:35 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:54:33 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*handle_null_line(t_ms *ms, char *filename, char *limiter)
 void	write_line_to_file(t_ms *ms, char *line)
 {
 	int	len;
-
+	
 	len = ft_strlen(line);
 	write(ms->here_doc_fd, line, len);
 	write(ms->here_doc_fd, "\n", 1);

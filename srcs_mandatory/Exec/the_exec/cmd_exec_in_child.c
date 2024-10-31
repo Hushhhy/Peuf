@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:38:24 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/30 18:31:36 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:38:14 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	clean_child(t_ms *ms)
 {
-	dprintf(2, "AAAAAAAAAAAAA\n");
 	clear_cmdlines(&ms->cmdlines);
 	free_tokens(&ms->tokens);
 	free_env(&ms->env);

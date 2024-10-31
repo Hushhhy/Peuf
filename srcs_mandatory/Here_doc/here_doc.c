@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:05:06 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/30 19:25:28 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:38:28 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ void	read_and_write_lines(t_ms *ms, char *filename,
 		{
 			handle_null_line(ms, filename, limiter);
 			close(ms->here_doc_fd);
-			if (g_var == CTRL_C)
-			{
-				free(line);
-				break ;
-			}
 		}
 		if (line && check_line_against_limiter(line, limiter))
 			break ;
