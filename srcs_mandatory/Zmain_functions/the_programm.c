@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:16:36 by acarpent          #+#    #+#             */
-/*   Updated: 2024/10/31 12:38:33 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:21:18 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,7 @@ void	the_program(t_ms *ms)
 		if (handle_ctrld(ms))
 			break ;
 		if (g_var != 0)
-		{
 			ms->v_return = g_var;
-			g_var = 0;
-		}
 		if (full_check(ms) == false)
 			continue ;
 		handle_here_doc(ms, &ms->tokens);

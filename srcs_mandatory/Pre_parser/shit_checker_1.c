@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shit_checker_1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pgrellie <pgrellie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 18:19:14 by pgrellie          #+#    #+#             */
-/*   Updated: 2024/10/01 18:30:38 by pgrellie         ###   ########.fr       */
+/*   Updated: 2024/10/31 16:59:51 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,10 @@ bool	shit_check_1(char *s)
 		return (false);
 	else
 		return (true);
+}
+
+t_ms *get_ms()
+{
+    static t_ms ms = {0};
+    return (&ms);
 }

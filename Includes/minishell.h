@@ -6,7 +6,7 @@
 /*   By: acarpent <acarpent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:22:22 by pgrellie          #+#    #+#             */
-/*   Updated: 2024/10/31 12:47:08 by acarpent         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:02:06 by acarpent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -203,6 +203,7 @@ bool			c_check(char *s);
 bool			shit_check_1(char *s);
 bool			_redirs_checker(t_ms *ms);
 bool			full_check(t_ms *ms);
+t_ms 			*get_ms();
 
 //---------Env funtions----------//
 
@@ -298,6 +299,7 @@ void			zero_pid_handle(int saved_stdin, char *tmp_file,
 					t_token *limiter, t_ms *ms);
 void			read_and_write_lines(t_ms *ms, char *filename,
 					char *limiter, int saved_stdin);
+void			free_ctrl_c(t_ms *ms);
 
 //-------------Exec--------------//
 
